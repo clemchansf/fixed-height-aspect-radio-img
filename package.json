@@ -4,8 +4,11 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "dev": "webpack serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack serve --open --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "homepage": "https://clemchansf.github.io/fixed-height-aspect-ratio-img",
+    "deploy": "npm run build&&gh-pages -d app",
+    "build": "webpack  --config ./webpack.production.config.js"
   },
   "keywords": [],
   "author": "",
@@ -27,5 +30,8 @@
     "webpack": "^5.19.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-server": "^3.11.2"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
