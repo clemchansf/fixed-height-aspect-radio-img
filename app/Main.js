@@ -67,7 +67,7 @@ function Main() {
             {state.resizedImages.map(item => {
               return item.map(image => {
                 let { width, height, src, alt } = image
-                return <img key={alt} src={src} width={width} height={height} />
+                return <img key={alt} src={src} style={{ width: `${width}px!important`, height }} />
               })
             })}
           </div>
